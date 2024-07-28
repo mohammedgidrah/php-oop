@@ -1,7 +1,7 @@
 <?php
 
 
-
+echo "<pre>";
 
 class car
 {
@@ -64,28 +64,18 @@ class Inventory
     {
         $this->cars[] = $car;
     }
-    function removeCar($VIN) {
-      
-        foreach ($this->cars as $index => $car) {
+
+    public function removeCar($VIN)
+    {
+        foreach ($this->cars as $key => $car) {
             if ($car->getVIN() === $VIN) {
-                unset($this->cars[$index]);
-                $this->cars = array_values($this->cars);
-                echo "Car with VIN $VIN has been removed.<br>";
-                
+                unset($this->cars[$key]);
+                echo "Car with VIN $VIN has been removed.\n";
+                return;
             }
         }
-        }
-    // public function removeCar($VIN)
-    // {
-    //     foreach ($this->cars as $key => $car) {
-    //         if ($car->getVIN() === $VIN) {
-    //             unset($this->cars[$key]);
-    //             echo "Car with VIN $VIN has been removed.\n";
-    //             return;
-    //         }
-    //     }
-    //     echo "Car with VIN $VIN not found.\n";
-    // }
+        echo "Car with VIN $VIN not found.\n";
+    }
     public function listCars()
     {
         if (empty($this->cars)) {
@@ -123,3 +113,5 @@ echo "<br>";
 $inventory->listCars();
 echo "<br>";
 echo "<br>";
+
+echo "<pre>";
