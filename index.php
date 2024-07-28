@@ -20,10 +20,7 @@ class car
     {
         echo "Car with VIN {$this->VIN} is destroyed.\n";
     }
-    // public function getDetails()
-    // {
-    //     return "make: $this->make,  model : $this->model , VIN: $this->VIN";
-    // }
+
 
     public function getDetails()
     {
