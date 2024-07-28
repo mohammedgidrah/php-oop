@@ -5,9 +5,9 @@
 
 class car
 {
-    public $make;
-    public $model;
-    public $VIN;
+    private $make;
+    private $model;
+    private $VIN;
 
 
     public function __construct($make, $model, $VIN)
