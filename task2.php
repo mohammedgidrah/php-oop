@@ -53,9 +53,9 @@ class Classroom
 {
     private $student = [];
 
-    public function addStudent(student $students)
+    public function addStudent(student $student)
     {
-        $this->student[] = $students;
+        $this->student[] = $student;
     }
 
     public function removestudent($student_id)
