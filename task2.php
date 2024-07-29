@@ -91,11 +91,17 @@ $classroom->addStudent($student3);
 $classroom->addStudent($student4);
 $classroom->addStudent($student5);
 // $classroom->addStudent($student2);
+echo "List of Students:\n";
+$classroom->listStudents();
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
 $classroom->removestudent(3);
 echo "<br>";
 echo "<br>";
 
-echo "List of Students:\n";
+echo "List of Students after removal:\n";
 $classroom->listStudents();
 echo "<br>";
 echo "<br>";
